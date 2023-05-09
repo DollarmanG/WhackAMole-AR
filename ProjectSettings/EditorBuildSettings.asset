@@ -4,7 +4,10 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/_WhackAMoleProject_/Scenes/WhackAMole.unity
+    guid: 9fc0d4010bbf28b4594072e72b8655ab
   m_configObjects:
     UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: f93b6bc22dd7b774db3a11f9dffecc55, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 75c554223fd03da4199b72b3f23c64f9, type: 2}
