@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: f92c36da099d3f74fbed68567f1c4c4f
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Zero Cool
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: f97b37c7923c5814bac20e5884d728cd, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

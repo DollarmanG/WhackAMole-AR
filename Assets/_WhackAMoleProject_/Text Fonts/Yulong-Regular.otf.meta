@@ -1,0 +1,24 @@
+fileFormatVersion: 2
+guid: 7e3ecfb2f0bd9c84cac505add6ddc37d
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Yulong
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 50bf723590ff61f47ac5112dff62585c, type: 3}
+  - {fileID: 12800000, guid: 6e325a71425895a479e78e2d40ac5942, type: 3}
+  - {fileID: 12800000, guid: b86483ae20349fb4d9c7c7e815e37b54, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
