@@ -1,18 +1,30 @@
 using System.Collections;
 using System.Collections.Generic;
+using Unity.VisualScripting;
 using UnityEngine;
+using TMPro;
 
 public class GameManagerController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    [SerializeField] private WhackamoleEventManager eventManager;
+
+    [SerializeField] private TMP_Text score;
+
+    private int currentScore = 0;
+
+    void OnEnable()
     {
-        
+        eventManager.OnHitMole += EventManager_OnHitMole;
     }
 
-    // Update is called once per frame
-    void Update()
+    void OnDisable()
     {
-        
+        eventManager.OnHitMole -= EventManager_OnHitMole;
+    }
+
+    private void EventManager_OnHitMole()
+    {
+        currentScore++;
+        score.text = "Score: " + currentScore.ToString();
     }
 }

@@ -19,6 +19,11 @@ public class ARTapToPlaceShowHidePlane : MonoBehaviour
     [SerializeField]
     private ARPlaneManager planeManager;
 
+    void Awake()
+    {
+        prefabToInstantiate.SetActive(false);
+    }
+
     bool TryGetTouchPosition(out Vector2 touchPos)
     {
         if (Input.touchCount > 0)
