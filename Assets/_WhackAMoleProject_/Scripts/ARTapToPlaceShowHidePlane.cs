@@ -57,7 +57,6 @@ public class ARTapToPlaceShowHidePlane : MonoBehaviour
                 spawnedObject.transform.position = hitPose.position;
                 spawnedObject.transform.rotation = hitPose.rotation;
 
-
                 if (spawnedObject.GetComponent<ARAnchor>() == null)
                 {
                     spawnedObject.AddComponent<ARAnchor>();

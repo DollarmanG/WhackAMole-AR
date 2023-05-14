@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using AugmentedRealityCourse;
 
 public class WhackamoleCollisionHandler : MonoBehaviour
 {
@@ -9,7 +10,9 @@ public class WhackamoleCollisionHandler : MonoBehaviour
 
     void OnCollisionEnter(Collision collision)
     {
-        eventManager.TriggerHitMoleEvent();
+        //eventManager.TriggerHitMoleEvent();
+
+        DebugManager.Instance.AddDebugMessage("Träffad!");
         gameObject.SetActive(false);
         /*if (collision.gameObject.CompareTag("Hammer"))
         {
