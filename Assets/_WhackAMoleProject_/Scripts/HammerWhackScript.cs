@@ -3,7 +3,10 @@ using System.Collections.Generic;
 using UnityEngine;
 using AugmentedRealityCourse;
 using Unity.VisualScripting;
+using UnityEngine.InputSystem;
+using UnityEngine.InputSystem.EnhancedTouch;
 
+using refToTouch = UnityEngine.InputSystem.EnhancedTouch;
 public class HammerWhackScript : MonoBehaviour
 {
     [SerializeField] WhackamoleEventManager whackamoleEventManager;
@@ -12,9 +15,28 @@ public class HammerWhackScript : MonoBehaviour
 
     [SerializeField] private LayerMask layerMask;
 
+
+
     private bool IsGameRunning;
 
-    void Update()
+    void Awake()
+    {
+        EnhancedTouchSupport.Enable();
+    }
+
+    void OnEnable()
+    {
+        whackamoleEventManager.OnStartGame += WhackamoleEventManager_OnStartGame;
+        refToTouch.Touch.onFingerDown += Touch_onFingerDown;
+    }
+
+    void OnDisable()
+    {
+        whackamoleEventManager.OnStartGame -= WhackamoleEventManager_OnStartGame;
+        refToTouch.Touch.onFingerDown -= Touch_onFingerDown;
+    }
+
+    private void Touch_onFingerDown(Finger obj)
     {
         if (Input.touchCount > 0 && IsGameRunning)
         {
@@ -27,17 +49,6 @@ public class HammerWhackScript : MonoBehaviour
                 DebugManager.Instance.AddDebugMessage(hitInfo.point.ToString());
             }
         }
-    }
-
-
-    void OnEnable()
-    {
-        whackamoleEventManager.OnStartGame += WhackamoleEventManager_OnStartGame;
-    }
-
-    void OnDisable()
-    {
-        whackamoleEventManager.OnStartGame -= WhackamoleEventManager_OnStartGame;
     }
 
     private void WhackamoleEventManager_OnStartGame()

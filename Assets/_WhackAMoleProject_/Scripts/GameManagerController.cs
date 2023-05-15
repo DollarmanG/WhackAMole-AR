@@ -24,7 +24,7 @@ public class GameManagerController : MonoBehaviour
 
     private void EventManager_OnHitMole()
     {
-        currentScore++;
-        score.text = "Score: " + currentScore.ToString();
+        currentScore += 100;
+        score.text = currentScore.ToString();
     }
 }

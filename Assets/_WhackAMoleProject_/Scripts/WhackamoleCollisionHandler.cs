@@ -13,12 +13,7 @@ public class WhackamoleCollisionHandler : MonoBehaviour
         //eventManager.TriggerHitMoleEvent();
         Debug.Log("Träffad");
         DebugManager.Instance.AddDebugMessage("Träffad!");
+        eventManager.TriggerHitMoleEvent();
         gameObject.SetActive(false);
-        /*if (collision.gameObject.CompareTag("Hammer"))
-        {
-            eventManager.TriggerHitMoleEvent();
-            gameObject.SetActive(false);
-        }
-        */
     }
 }
