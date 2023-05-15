@@ -11,7 +11,7 @@ public class WhackamoleCollisionHandler : MonoBehaviour
     void OnCollisionEnter(Collision collision)
     {
         //eventManager.TriggerHitMoleEvent();
-
+        Debug.Log("Träffad");
         DebugManager.Instance.AddDebugMessage("Träffad!");
         gameObject.SetActive(false);
         /*if (collision.gameObject.CompareTag("Hammer"))
