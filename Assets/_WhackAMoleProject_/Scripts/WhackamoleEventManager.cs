@@ -8,8 +8,15 @@ public class WhackamoleEventManager : ScriptableObject
 {
     public event Action OnHitMole;
 
+    public event Action OnStartGame;
+
     public void TriggerHitMoleEvent()
     {
         OnHitMole?.Invoke();
+    }
+
+    public void TriggerGameStart()
+    {
+        OnStartGame?.Invoke();
     }
 }

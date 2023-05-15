@@ -19,6 +19,8 @@ public class ARTapToPlaceShowHidePlane : MonoBehaviour
     [SerializeField]
     private ARPlaneManager planeManager;
 
+    [SerializeField] WhackamoleEventManager whackamoleEventManager;
+
     void Awake()
     {
         prefabToInstantiate.SetActive(false);
@@ -45,8 +47,11 @@ public class ARTapToPlaceShowHidePlane : MonoBehaviour
             return;
         }
 
+
+
         if (raycastManager.Raycast(touchPosition, hitList, TrackableType.Planes))
         {
+
             Pose hitPose = hitList[0].pose;
 
             if (spawnedObject == null)
@@ -66,6 +71,8 @@ public class ARTapToPlaceShowHidePlane : MonoBehaviour
 
                 TogglePlaneVisibility();
                 StopPlaneTracking();
+                whackamoleEventManager.TriggerGameStart();
+
             }
         }
 
