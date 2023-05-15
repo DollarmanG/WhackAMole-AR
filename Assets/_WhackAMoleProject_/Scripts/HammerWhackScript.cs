@@ -16,7 +16,7 @@ public class HammerWhackScript : MonoBehaviour
 
             if (Physics.Raycast(ray, out RaycastHit hitInfo))
             {
-                gameObject.transform.position = hitInfo.point;
+                gameObject.transform.position = hitInfo.point + new Vector3(0, 0, -0.2f);
                 hammerAnimator.SetTrigger("HammerTrigger");
                 DebugManager.Instance.AddDebugMessage(hitInfo.point.ToString());
             }
